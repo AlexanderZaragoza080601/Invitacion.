@@ -7,80 +7,6 @@
     html, body {
       margin: 0;
       padding: 0;
-      background-color: white; /* fondo blanco alrededor si la imagen no llena */
-      height: 100%;
-      width: 100%;
-    }
-
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .contenedor {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      background-color: white; /* asegura blanco detrás de la imagen */
-    }
-
-    .contenedor img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* ahora siempre muestra toda la imagen */
-      display: block;
-    }
-
-    .boton-link {
-      position: absolute;
-      top: 85%; /* ajusta para colocarlo debajo de padrinos */
-      left: 10%; /* alineado a la izquierda */
-      background-color: #858282;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-family: sans-serif;
-      transition: background-color 0.3s ease;
-    }
-
-    .boton-link:hover {
-      background-color: #333;
-    }
-
-    @media screen and (max-width: 600px) {
-      .boton-link {
-        font-size: 14px;
-        padding: 10px 20px;
-        top: 86%; /* ajuste para móviles si se mueve ligeramente */
-        left: 10%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="contenedor">
-    <img src="img_invitacion.jpg" alt="Invitación">
-    <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
-      Ver Ubicación
-    </a>
-  </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Invitación</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
       background-color: #000;
       height: 100%;
       width: 100%;
@@ -102,14 +28,15 @@
     .contenedor img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* tal como lo tenías */
+      object-fit: cover; /* mantenido como en tu versión original */
       display: block;
     }
 
     .boton-link {
       position: absolute;
-      top: 83%; /* ajusta según sea necesario para la posición exacta debajo de padrinos */
-      left: 10%; /* alineado a la izquierda */
+      top: 78%; /* ajusta este porcentaje para colocarlo justo debajo del texto de padrinos */
+      left: 50%;
+      transform: translateX(-50%);
       background-color: #858282;
       color: white;
       padding: 12px 25px;
@@ -128,8 +55,7 @@
       .boton-link {
         font-size: 14px;
         padding: 10px 20px;
-        top: 84%; /* pequeño ajuste para móviles */
-        left: 10%;
+        top: 79%; /* pequeño ajuste solo para móviles */
       }
     }
   </style>
