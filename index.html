@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contenedor {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .contenedor img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .boton-link {
+      position: absolute;
+      bottom: 150px; /* más alto desde el borde inferior */
+      left: 80px;    /* alineado a la izquierda */
+      background-color: #858282;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-link:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <img src= "img_invitacion.jpg" alt="Invitación">
+    <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
+      Ver Ubicación
+    </a>
+  </div>
+
+</body>
+</html>
