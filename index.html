@@ -9,6 +9,10 @@
       padding: 0;
       background-color: #000;
       height: 100%;
+      width: 100%;
+    }
+
+    body {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -16,20 +20,22 @@
 
     .contenedor {
       position: relative;
-      width: 100%;
-      max-width: 800px;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
     }
 
     .contenedor img {
-      width: 100%;
-      height: auto;
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain; /* ajusta sin recortar */
       display: block;
     }
 
     .boton-link {
       position: absolute;
-      bottom: 150px; /* más alto desde el borde inferior */
-      left: 80px;    /* alineado a la izquierda */
+      bottom: 8%;
+      left: 10%;
       background-color: #858282;
       color: white;
       padding: 12px 25px;
@@ -43,12 +49,19 @@
     .boton-link:hover {
       background-color: #333;
     }
+
+    @media screen and (max-width: 600px) {
+      .boton-link {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="contenedor">
-    <img src= "img_invitacion.jpg" alt="Invitación">
+    <img src="img_invitacion.jpg" alt="Invitación">
     <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
       Ver Ubicación
     </a>
