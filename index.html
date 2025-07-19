@@ -19,60 +19,39 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
 
-    .envoltura-img {
-      position: relative;
-      display: inline-block;
+    .contenedor img {
       max-width: 100%;
       max-height: 100%;
-    }
-
-    .imagen {
-      width: 100%;
-      height: auto;
+      object-fit: contain; /* MUY IMPORTANTE: mantiene la proporción y evita recortes */
       display: block;
-      object-fit: contain;
     }
 
     .boton-link {
       position: absolute;
-      /* POSICIÓN RELATIVA A LA IMAGEN */
-      bottom: 25%;
-      left: 5%;
-
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: #858282;
       color: white;
       padding: 12px 25px;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 1.2vw;
+      font-size: 16px;
       font-family: sans-serif;
       transition: background-color 0.3s ease;
-      white-space: nowrap;
     }
 
     .boton-link:hover {
       background-color: #333;
     }
 
-    /* Responsivo para tablets */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 600px) {
       .boton-link {
         font-size: 14px;
         padding: 10px 20px;
-        bottom: 28%;
-        left: 5%;
-      }
-    }
-
-    /* Responsivo para celulares */
-    @media screen and (max-width: 480px) {
-      .boton-link {
-        font-size: 12px;
-        padding: 8px 16px;
-        bottom: 30%;
-        left: 4%;
       }
     }
   </style>
@@ -80,12 +59,10 @@
 <body>
 
   <div class="contenedor">
-    <div class="envoltura-img">
-      <img src="img_invitacion.jpg" alt="Invitación" class="imagen">
-      <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
-        Ver Ubicación
-      </a>
-    </div>
+    <img src="img_invitacion.jpg" alt="Invitación">
+    <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
+      Ver Ubicación
+    </a>
   </div>
 
 </body>
