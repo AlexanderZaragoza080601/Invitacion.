@@ -19,19 +19,25 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .envoltura-img {
       position: relative;
+      display: inline-block;
+      max-width: 100%;
+      max-height: 100%;
     }
 
     .imagen {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      width: 100%;
+      height: auto;
       display: block;
+      object-fit: contain;
     }
 
     .boton-link {
       position: absolute;
-      /* MÁS A LA IZQUIERDA Y MÁS ALTO */
+      /* POSICIÓN RELATIVA A LA IMAGEN */
       bottom: 25%;
       left: 5%;
 
@@ -50,7 +56,7 @@
       background-color: #333;
     }
 
-    /* Para tablets */
+    /* Responsivo para tablets */
     @media screen and (max-width: 768px) {
       .boton-link {
         font-size: 14px;
@@ -60,7 +66,7 @@
       }
     }
 
-    /* Para celulares */
+    /* Responsivo para celulares */
     @media screen and (max-width: 480px) {
       .boton-link {
         font-size: 12px;
@@ -74,10 +80,12 @@
 <body>
 
   <div class="contenedor">
-    <img src="img_invitacion.jpg" alt="Invitación" class="imagen">
-    <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
-      Ver Ubicación
-    </a>
+    <div class="envoltura-img">
+      <img src="img_invitacion.jpg" alt="Invitación" class="imagen">
+      <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
+        Ver Ubicación
+      </a>
+    </div>
   </div>
 
 </body>
