@@ -11,31 +11,38 @@
       width: 100vw;
       height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
-    .envoltura-img {
+    .contenedor {
       position: relative;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       max-width: 90vw;
       max-height: 90vh;
     }
 
-    .imagen {
-      width: 100%;
+    .contenedor img {
+      max-width: 100%;
+      max-height: 100%;
       height: auto;
       display: block;
     }
 
     .boton-link {
       position: absolute;
+      /* 👇 AJUSTA ESTAS DOS LÍNEAS COMO NECESITES */
+      bottom: 12%; /* qué tan alto desde abajo */
+      left: 8%;    /* qué tan a la izquierda */
+
       background-color: #858282;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       text-decoration: none;
       border-radius: 8px;
-      font-size: 1rem;
+      font-size: 16px;
       font-family: sans-serif;
       transition: background-color 0.3s ease;
       white-space: nowrap;
@@ -44,34 +51,26 @@
     .boton-link:hover {
       background-color: #333;
     }
+
+    @media screen and (max-width: 480px) {
+      .boton-link {
+        font-size: 14px;
+        padding: 10px 20px;
+        /* 👇 Puedes ajustar específicamente para móvil si lo deseas */
+        bottom: 14%;
+        left: 6%;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="envoltura-img">
-    <img src="img_invitacion.jpg" alt="Invitación" class="imagen" id="imgInvitacion">
-    <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" id="btnUbicacion" target="_blank">
+  <div class="contenedor">
+    <img src="img_invitacion.jpg" alt="Invitación">
+    <a href="https://maps.app.goo.gl/784ovWom49VhckCy5" class="boton-link" target="_blank">
       Ver Ubicación
     </a>
   </div>
-
-  <script>
-    const img = document.getElementById('imgInvitacion');
-    const btn = document.getElementById('btnUbicacion');
-
-    function posicionarBoton() {
-      const rect = img.getBoundingClientRect();
-      const bottomOffset = 60; // 🔧 distancia desde la parte inferior (px)
-      const leftOffset = 50;   // 🔧 distancia desde la izquierda (px)
-
-      btn.style.bottom = 'unset'; // reset por si media query aplicó
-      btn.style.left = leftOffset + 'px';
-      btn.style.top = (rect.height - bottomOffset) + 'px';
-    }
-
-    img.addEventListener('load', posicionarBoton);
-    window.addEventListener('resize', posicionarBoton);
-  </script>
 
 </body>
 </html>
