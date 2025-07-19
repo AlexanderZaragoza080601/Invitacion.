@@ -29,12 +29,11 @@
       display: block;
     }
 
-    /* Botón relativo a la imagen */
     .boton-link {
       position: absolute;
-      /* % relativos al contenedor visible */
-      bottom: 10%;
-      left: 10%;
+      /* MÁS A LA IZQUIERDA Y MÁS ALTO */
+      bottom: 25%;
+      left: 5%;
 
       background-color: #858282;
       color: white;
@@ -51,22 +50,23 @@
       background-color: #333;
     }
 
-    /* Ajustes para pantallas pequeñas */
+    /* Para tablets */
     @media screen and (max-width: 768px) {
       .boton-link {
         font-size: 14px;
         padding: 10px 20px;
-        bottom: 12%;
-        left: 8%;
+        bottom: 28%;
+        left: 5%;
       }
     }
 
+    /* Para celulares */
     @media screen and (max-width: 480px) {
       .boton-link {
         font-size: 12px;
         padding: 8px 16px;
-        bottom: 10%;
-        left: 6%;
+        bottom: 30%;
+        left: 4%;
       }
     }
   </style>
